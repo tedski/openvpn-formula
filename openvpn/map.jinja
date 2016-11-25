@@ -1,6 +1,7 @@
 {% set map = salt['grains.filter_by']({
     'Debian': {
         'pkgs': ['openvpn'],
+        'easy_rsa_pkg': 'easy-rsa',
         'service': 'openvpn',
         'conf_dir': '/etc/openvpn',
         'dh_files': ['1024', '2048'],
@@ -9,6 +10,7 @@
     },
     'Ubuntu': {
         'pkgs': ['openvpn'],
+        'easy_rsa_pkg': 'easy-rsa',
         'service': 'openvpn',
         'conf_dir': '/etc/openvpn',
         'dh_files': ['1024', '2048'],
